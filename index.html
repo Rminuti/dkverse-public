@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DKVerse | Card Wallet, Vault and Market</title>
+    <meta
+      name="description"
+      content="DKVerse is a premium card wallet with DKvault and DKmarket for collectors and investors."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell-frame">
+      <header class="top-nav">
+        <a class="brand" href="#home" data-route="home" aria-label="DKVerse home">
+          <img src="./assets/logo-dk-top.png" alt="DKVerse" />
+          <span>
+            <strong>DKVerse</strong>
+            <small>Card Wallet</small>
+          </span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <button data-route="home">Home</button>
+          <button data-route="account">Open Account</button>
+          <button data-route="vault">DKvault</button>
+          <button data-route="market">DKmarket</button>
+          <button data-route="arena">DKarena</button>
+          <button data-route="terms">Terms</button>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" id="searchToggle" type="button" aria-label="Search">⌕</button>
+          <button class="outline-button" data-route="account" type="button">Connect Account</button>
+          <button class="menu-button" id="menuToggle" type="button" aria-label="Open menu">☰</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="view active" id="view-home">
+          <div class="hero">
+            <div class="hero-copy">
+              <span class="eyebrow">Trade · Hold · Connect</span>
+              <h1>One Verse. Endless Card Possibilities.</h1>
+              <p>
+                DKVerse is a premium wallet for physical trading cards. Open your account,
+                register cards in DKvault and negotiate directly through DKmarket.
+              </p>
+              <div class="hero-actions">
+                <button class="primary-button" data-route="account" type="button">Enter the Verse</button>
+                <button class="ghost-button" data-route="market" type="button">Explore Market</button>
+              </div>
+            </div>
+
+            <div class="hero-stage" aria-hidden="true">
+              <div class="orbit-logo">
+                <img src="./assets/logo-dk-top.png" alt="" />
+              </div>
+              <div class="card-fan">
+                <article class="show-card show-card-a">
+                  <span>DK</span>
+                  <strong>Epic</strong>
+                  <small>Vault</small>
+                </article>
+                <article class="show-card show-card-b">
+                  <span>DK</span>
+                  <strong>Legendary</strong>
+                  <small>Market</small>
+                </article>
+                <article class="show-card show-card-c">
+                  <span>DK</span>
+                  <strong>Rare</strong>
+                  <small>Arena</small>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <section class="metrics-band" aria-label="Platform highlights">
+            <article>
+              <span>01</span>
+              <strong>Private DKvault</strong>
+              <small>Cards, values, photos and notes controlled by the owner.</small>
+            </article>
+            <article>
+              <span>02</span>
+              <strong>DKmarket Desk</strong>
+              <small>Listings, bids, asks, watchlist and direct negotiation.</small>
+            </article>
+            <article>
+              <span>03</span>
+              <strong>Investor Responsibility</strong>
+              <small>Payment and physical exchange remain between users.</small>
+            </article>
+            <article>
+              <span>04</span>
+              <strong>Future DKarena</strong>
+              <small>Prepared for rules, matches and global tournaments.</small>
+            </article>
+          </section>
+
+          <section class="module-grid">
+            <article class="module-card">
+              <img src="./assets/logo-dk-top.png" alt="" />
+              <div>
+                <span class="eyebrow">Wallet</span>
+                <h2>DKvault</h2>
+                <p>Register your physical cards, estimated values, condition and sale status.</p>
+                <button class="ghost-button" data-route="vault" type="button">Open DKvault</button>
+              </div>
+            </article>
+            <article class="module-card">
+              <img src="./assets/logo-dk-market.png" alt="" />
+              <div>
+                <span class="eyebrow">Trading Desk</span>
+                <h2>DKmarket</h2>
+                <p>Negotiate like a card homebroker. Buyers and sellers manage payments and delivery.</p>
+                <button class="ghost-button" data-route="market" type="button">Open DKmarket</button>
+              </div>
+            </article>
+            <article class="module-card">
+              <img src="./assets/logo-dk-arena.png" alt="" />
+              <div>
+                <span class="eyebrow">Future Game</span>
+                <h2>DKarena</h2>
+                <p>A reserved area for card battles, custom rules and world tournaments.</p>
+                <button class="ghost-button" data-route="arena" type="button">Preview DKarena</button>
+              </div>
+            </article>
+          </section>
+        </section>
+
+        <section class="view" id="view-account">
+          <div class="page-hero compact-hero">
+            <span class="eyebrow">Account Opening</span>
+            <h1>Open your DKVerse Card Wallet.</h1>
+            <p>
+              Create a simple investor profile. This version stores data locally until Firebase is connected.
+            </p>
+          </div>
+          <div class="two-column">
+            <form class="panel form-panel" id="accountForm">
+              <div class="panel-heading">
+                <span class="eyebrow">Step 01</span>
+                <h2>Account details</h2>
+              </div>
+              <label>
+                Full name
+                <input name="fullName" required placeholder="Your full name" />
+              </label>
+              <label>
+                Email
+                <input name="email" required type="email" placeholder="you@email.com" />
+              </label>
+              <label>
+                Public handle
+                <input name="handle" required placeholder="DKLegend" />
+              </label>
+              <label>
+                Country
+                <input name="country" placeholder="Brazil" />
+              </label>
+              <label>
+                Investor profile
+                <select name="profileType">
+                  <option>Collector</option>
+                  <option>Player</option>
+                  <option>Investor</option>
+                  <option>Store</option>
+                </select>
+              </label>
+              <label>
+                Password
+                <input name="password" type="password" minlength="6" placeholder="For Firebase later" />
+              </label>
+              <label class="checkbox-line">
+                <input name="acceptedTerms" type="checkbox" required />
+                I accept the DKVerse terms and understand that payments and physical card exchange are my responsibility.
+              </label>
+              <button class="primary-button" type="submit">Save Account</button>
+            </form>
+
+            <aside class="panel account-card">
+              <span class="eyebrow">Current Wallet</span>
+              <div id="accountSummary"></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-vault">
+          <div class="page-hero vault-hero">
+            <span class="eyebrow">DKvault</span>
+            <h1>Your card wallet.</h1>
+            <p>Register physical cards, keep values under your control and choose what can go to DKmarket.</p>
+          </div>
+
+          <div class="vault-layout">
+            <form class="panel form-panel" id="cardForm">
+              <div class="panel-heading">
+                <span class="eyebrow">Add Card</span>
+                <h2>Card registration</h2>
+              </div>
+              <label>
+                Card name
+                <input name="name" required placeholder="Ex. Charizard, Blue-Eyes, Jordan Rookie" />
+              </label>
+              <label>
+                Game / Category
+                <select name="category">
+                  <option>Pokémon</option>
+                  <option>Magic</option>
+                  <option>Yu-Gi-Oh!</option>
+                  <option>Sports</option>
+                  <option>One Piece</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                Set / Collection
+                <input name="collection" placeholder="Base Set, Prismatic, Rookie, etc." />
+              </label>
+              <label>
+                Number
+                <input name="number" placeholder="#001" />
+              </label>
+              <label>
+                Condition
+                <select name="condition">
+                  <option>Raw - Near Mint</option>
+                  <option>Raw - Excellent</option>
+                  <option>Raw - Played</option>
+                  <option>Graded</option>
+                  <option>Sealed</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                Estimated value
+                <input name="value" type="number" min="0" step="1" placeholder="1200" />
+              </label>
+              <label>
+                Ask price
+                <input name="ask" type="number" min="0" step="1" placeholder="Leave blank if not for sale" />
+              </label>
+              <label>
+                Front image
+                <input name="image" type="file" accept="image/*" />
+              </label>
+              <label class="full">
+                Notes
+                <textarea name="notes" placeholder="Private notes, public description, provenance, grading number..."></textarea>
+              </label>
+              <label class="checkbox-line full">
+                <input name="forSale" type="checkbox" />
+                Make this card visible in DKmarket.
+              </label>
+              <button class="primary-button" type="submit">Save to DKvault</button>
+            </form>
+
+            <section class="panel">
+              <div class="panel-heading split-heading">
+                <div>
+                  <span class="eyebrow">Portfolio</span>
+                  <h2>Registered cards</h2>
+                </div>
+                <strong id="portfolioValue">$0</strong>
+              </div>
+              <div class="card-grid" id="vaultCards"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-market">
+          <div class="market-shell">
+            <aside class="panel market-filter">
+              <span class="eyebrow">DKmarket</span>
+              <h1>Premium Marketplace.</h1>
+              <p>Trade, collect and own legends. Negotiation is direct between users.</p>
+              <label>
+                Search
+                <input id="marketSearch" type="search" placeholder="Search cards, users, collections" />
+              </label>
+              <label>
+                Category
+                <select id="marketCategory">
+                  <option value="All">All</option>
+                  <option>Pokémon</option>
+                  <option>Magic</option>
+                  <option>Yu-Gi-Oh!</option>
+                  <option>Sports</option>
+                  <option>One Piece</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>
+                Max price
+                <input id="marketMax" type="number" min="0" placeholder="No limit" />
+              </label>
+              <button class="ghost-button" id="clearMarketFilters" type="button">Reset filters</button>
+              <hr />
+              <button class="primary-button" id="createWishlist" type="button">Add to Watchlist</button>
+            </aside>
+
+            <section class="market-main">
+              <div class="market-searchbar panel">
+                <input id="deskSearch" type="search" placeholder="Search cards, collections and users..." />
+                <button class="primary-button" type="button">Search</button>
+              </div>
+              <section class="featured-market panel">
+                <div>
+                  <span class="eyebrow">Featured Desk</span>
+                  <h2>Drakonis Legacy</h2>
+                  <p>Sample premium desk. Real cards appear here when users publish cards from DKvault.</p>
+                  <button class="ghost-button" data-route="vault" type="button">Start Selling</button>
+                </div>
+                <div class="mini-card-row" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+              </section>
+              <div class="market-toolbar">
+                <h2>All Listings <small id="listingCount">0 items</small></h2>
+                <select id="marketSort">
+                  <option value="newest">Newest listed</option>
+                  <option value="priceAsc">Lowest ask</option>
+                  <option value="priceDesc">Highest ask</option>
+                </select>
+              </div>
+              <div class="listing-grid" id="marketListings"></div>
+            </section>
+
+            <aside class="market-side">
+              <section class="panel">
+                <span class="eyebrow">Live Activity</span>
+                <div id="activityFeed"></div>
+              </section>
+              <section class="panel">
+                <span class="eyebrow">Watchlist</span>
+                <div id="watchlist"></div>
+              </section>
+              <section class="panel">
+                <span class="eyebrow">Market Terms</span>
+                <p class="small-copy">
+                  DKVerse is not escrow, broker, payment processor, carrier or authenticator. Users are responsible for payment, delivery and physical exchange.
+                </p>
+              </section>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-arena">
+          <div class="page-hero arena-hero">
+            <span class="eyebrow">DKarena</span>
+            <h1>World tournaments will start here.</h1>
+            <p>
+              This area is intentionally reserved for a future card game with DKVerse rules, match rooms,
+              ranking, spectators and global tournaments.
+            </p>
+          </div>
+          <div class="arena-grid">
+            <article class="panel">
+              <span class="eyebrow">Future Module</span>
+              <h2>Rule Builder</h2>
+              <p>Create custom rules for card battles, formats and tournament brackets.</p>
+            </article>
+            <article class="panel">
+              <span class="eyebrow">Future Module</span>
+              <h2>Match Rooms</h2>
+              <p>Invite players, publish matches, record replays and share highlights.</p>
+            </article>
+            <article class="panel">
+              <span class="eyebrow">Future Module</span>
+              <h2>World Ranking</h2>
+              <p>Prepare the foundation for official and community tournaments.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-terms">
+          <div class="page-hero compact-hero">
+            <span class="eyebrow">Terms and Conditions</span>
+            <h1>Simple rules for a card wallet.</h1>
+            <p>These terms are written in simple English and should be reviewed by legal counsel before public launch.</p>
+          </div>
+          <div class="terms-grid" id="termsList"></div>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast hidden" id="toast"></div>
+    <div class="modal hidden" id="modal">
+      <div class="modal-card">
+        <button class="icon-button modal-close" id="closeModal" type="button">×</button>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
